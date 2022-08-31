@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from "../components/Gurus/Carousel";
-import Formx from "../components/Gurus/Auth/Register/Form";
+import Carousel from "../components/Carousel";
+import Formx from "../components/Auth/Register/Form";
 import "../assets/css/register.css";
 import { Slider1, Slider2, Slider3, TextCabecera, SubCabecera } from "../resources/images"
 // import NavBar from "./navRegister"

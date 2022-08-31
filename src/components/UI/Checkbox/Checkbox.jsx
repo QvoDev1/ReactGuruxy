@@ -6,6 +6,7 @@ const Checkbox = (props) => {
           value={props.value}
           control={<MuiCheckbox color="primary" />}
           label={props.label}
+          
         />
     )
 }

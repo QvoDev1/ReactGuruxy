@@ -2,12 +2,13 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import { FormContainer } from "./Register.styled";
 import InputText from "../../UI/Input/Input";
 import Select from "../../UI/Select/Select";
 import Checkbox from "../../UI/Checkbox/Checkbox";
-import UserCircle from "../../../../elements/logos/UserCircle"
+import UserCircle from "../../../icons/UserCircle";
+import Button from "../../UI/Button/Button";
 
 const idTypes = ["CC", "NIT", "CE", "TI", "PSP"];
 
@@ -15,7 +16,7 @@ const Formx = (props) => {
   return (
     <FormContainer>
       <UserCircle color="#fec812" />
-      <div class="">
+      <div className="">
         <InputText label="Nombres" required />
         <InputText label="Apellidos" required />
         <InputText label="Contraseña" required />
@@ -34,13 +35,11 @@ const Formx = (props) => {
           ))}
         </Select>
 
-
         <InputText label="Numero de documento" required />
         <Checkbox value={1} label="Acepto Terminos y Condiciones" />
         <Checkbox value={1} label="Acepto Política de Tratamiento de datos" />
-        <Button variant="contained" color="warning" disableElevation>
-          CREAR USUARIO
-        </Button>
+
+        <Button block>CREAR USUARIO</Button>
       </div>
     </FormContainer>
   );

@@ -5,7 +5,7 @@ const Carousel = (props) => {
     return (
       <Crsl fade>
         { props.items.map(item => (
-          <Crsl.Item>
+          <Crsl.Item key={item.alt}>
             <img
               className="d-block w-100"
               src={item.src}
