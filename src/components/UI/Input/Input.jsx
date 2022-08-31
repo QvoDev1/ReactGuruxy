@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { TextField, Box } from "@mui/material";
+import COLORS from "../../../resources/colors";
 
 const Input = styled(TextField)`
-  background: #e6d9eb44;
+  background: ${COLORS.input_back_color};
   overflow: hidden;
   border: 1px solid gray;
-  color: white;
+  color: ${COLORS.white};
   border: solid white 1px;
-  margin-top: 15px;
   border-radius: 20px;
   margin: 10px 0;
 `;
@@ -40,6 +40,7 @@ const InputText = (props) => {
         InputProps={inputProps}
         InputLabelProps={inputLabelProps}
         fullWidth
+        size="small"
         variant="filled"
       />
     </Box>
