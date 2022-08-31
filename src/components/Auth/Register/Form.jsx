@@ -9,13 +9,28 @@ import Select from "../../UI/Select/Select";
 import Checkbox from "../../UI/Checkbox/Checkbox";
 import UserCircle from "../../../icons/UserCircle";
 import Button from "../../UI/Button/Button";
+import { useState } from "react";
+import COLORS from "../../../resources/colors";
 
 const idTypes = ["CC", "NIT", "CE", "TI", "PSP"];
 
 const Formx = (props) => {
+
+  const [terms, setTerms] = useState({
+    terms_and_conditions: false,
+    data_policy: false
+  })
+
+  const handleTermAndConditions = () => {
+    setTerms({ ...terms, terms_and_conditions: !terms.terms_and_conditions })
+  }
+  const handleDataPolicy = () => {
+    setTerms({ ...terms, data_policy: !terms.data_policy })
+  }
+
   return (
     <FormContainer>
-      <UserCircle color="#fec812" />
+      <UserCircle color={COLORS.secondary} />
       <div className="">
         <InputText label="Nombres" required />
         <InputText label="Apellidos" required />
@@ -24,8 +39,8 @@ const Formx = (props) => {
         <InputText label="Celular" required />
 
         {/* <label htmlFor="demo-simple-select-filled">Tipo de documento:</label> */}
-        <Select label="Tipo de documento:" value={props.value} required>
-          <MenuItem value="" selected>
+        <Select label="Tipo de documento:" required>
+          <MenuItem selected>
             Seleccionar una opción
           </MenuItem>
           {idTypes.map((type) => (
@@ -36,10 +51,18 @@ const Formx = (props) => {
         </Select>
 
         <InputText label="Numero de documento" required />
-        <Checkbox value={1} label="Acepto Terminos y Condiciones" />
-        <Checkbox value={1} label="Acepto Política de Tratamiento de datos" />
 
-        <Button block>CREAR USUARIO</Button>
+        <div style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "column",
+          margin: "20px 0"
+        }}>
+          <Checkbox onClick={handleTermAndConditions} value={terms.terms_and_conditions} label="Acepto Terminos y Condiciones" />
+          <Checkbox onClick={handleDataPolicy} value={terms.data_policy} label="Acepto Política de Tratamiento de datos" />
+        </div>
+        <Button block disabled={!(terms.data_policy && terms.terms_and_conditions)}>CREAR USUARIO</Button>
       </div>
     </FormContainer>
   );
