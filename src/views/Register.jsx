@@ -22,22 +22,21 @@ const items = [
 ]
 
 const Register = (props) => {
-
-
-
   return (
-    <div className="container-fluid">
+    <div>
       <div className="cabecera">
         <img src={TextCabecera} alt="Logo" width={"100%"} />
       </div>
       <img src={SubCabecera} alt="Logo" width={"100%"} />
       <Carousel items={items} />
       <form>
-      <div>
-        <div>
+      <div style={{
+        display: "flex",
+        justifyContent: "flex-end",
+        padding: "120px 50px"
+      }}>
         <Formx />
-        </div>
-        <img id="imgB" src="src/assets/img/body.jpg" alt="" />
+   
       </div>
       </form>
     </div>
