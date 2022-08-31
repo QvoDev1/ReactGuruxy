@@ -1,8 +1,10 @@
 import React from "react";
 import Carousel from "../components/Carousel";
+import Footer from "../components/Footer";
 import Formx from "../components/Auth/Register/Form";
+import { BgImg } from "../components/Auth/Register/Bg.styled";
 import "../assets/css/register.css";
-import { Slider1, Slider2, Slider3, TextCabecera, SubCabecera } from "../resources/images"
+import { Slider1, Slider2, Slider3, TextCabecera, SubCabecera,BackBodys } from "../resources/images"
 // import NavBar from "./navRegister"
 
 
@@ -29,6 +31,7 @@ const Register = (props) => {
       </div>
       <img src={SubCabecera} alt="Logo" width={"100%"} />
       <Carousel items={items} />
+      <BgImg>
       <form>
       <div style={{
         display: "flex",
@@ -39,6 +42,8 @@ const Register = (props) => {
    
       </div>
       </form>
+      </BgImg>
+<Footer/>
     </div>
   );
   

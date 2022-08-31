@@ -3,6 +3,7 @@
 const COLORS = {
     primary: "#63388f",
     secondary: "#fec812",
+    third: "#fec812",
 
     white: "#ddd",
     input_back_color: "#e6d9eb44",

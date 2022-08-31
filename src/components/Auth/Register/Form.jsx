@@ -12,6 +12,8 @@ import Button from "../../UI/Button/Button";
 import { useState } from "react";
 import COLORS from "../../../resources/colors";
 
+import Login from "../../../views/Login";
+
 const idTypes = ["CC", "NIT", "CE", "TI", "PSP"];
 
 const Formx = (props) => {
@@ -63,6 +65,8 @@ const Formx = (props) => {
           <Checkbox onClick={handleDataPolicy} value={terms.data_policy} label="Acepto Política de Tratamiento de datos" />
         </div>
         <Button block disabled={!(terms.data_policy && terms.terms_and_conditions)}>CREAR USUARIO</Button>
+       
+        <b style={{ color: "#fec812" }}>¿Ya tienes una cuenta? <a href='../../../Login'style={{ color: "#fff" ,textDecoration:'none'}}>Ingresa Aqui.</a></b>
       </div>
     </FormContainer>
   );

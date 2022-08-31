@@ -16,9 +16,9 @@ const UiButton = styled.button`
 
 const findColors = ({ disabled, secondary }) => {
   if (disabled) {
-    return { text: COLORS.text, bg: null };
+    return { text: COLORS.text, bg: COLORS.secondary };
   }
-  if (secondary) return { text: COLORS.primary, bg: COLORS.secondary }
+  if (secondary) return { text: COLORS.primary, bg: COLORS.third }
   return { text: COLORS.secondary, bg: COLORS.primary }
 }
 

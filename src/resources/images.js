@@ -5,11 +5,13 @@ import Slider3 from "../assets/img/slider3.jpg";
 
 import TextCabecera from "../assets/img/textos_cabecera.png";
 import SubCabecera from "../assets/img/subcabecera.jpg";
+import BackBodys from "../assets/img/body.jpg";
 
 export{
     Slider1,
     Slider2,
     Slider3,
     TextCabecera,
-    SubCabecera
+    SubCabecera,
+    BackBodys
 }
