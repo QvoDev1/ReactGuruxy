@@ -34,8 +34,10 @@ const Register = (props) => {
       <Carousel items={items} />
       <form>
       <div>
+        <div>
         <Formx />
-        <img id="imgB" src="src/elements/logos/body.jpg" alt="" />
+        </div>
+        <img id="imgB" src="src/assets/img/body.jpg" alt="" />
       </div>
       </form>
     </div>
