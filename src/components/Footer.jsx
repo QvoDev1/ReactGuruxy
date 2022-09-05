@@ -17,10 +17,10 @@ import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer,CDBBox  } from 
             <p className="h5 mb-4" style={{ fontWeight: '600', color:'#c93683' }}>
              <b>SOBRE NOSOTROS</b> 
             </p>
-            <CDBBox display="flex" flex="column" style={{ color:'white', cursor: 'pointer' }}>
-              <CDBFooterLink href="/" >Política de Privacidad</CDBFooterLink>
-              <CDBFooterLink href="/">Términos y Condiciones</CDBFooterLink>
-              <CDBFooterLink href="/">Términos de uso</CDBFooterLink>
+            <CDBBox display="flex" flex="column" >
+              <p style={{ color:'white', cursor: 'pointer' }} >Política de Privacidad</p>
+              <p style={{ color:'white', cursor: 'pointer' }}>Términos y Condiciones</p>
+              <p style={{ color:'white', cursor: 'pointer' }}>Términos de uso</p>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -28,7 +28,7 @@ import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer,CDBBox  } from 
               <b>¿ERES GURÚ?</b>
             </p>
             <CDBBox display="flex" flex="column" style={{ cursor: 'pointer' }}>
-              <CDBFooterLink href="/">Únete hoy a nosotros y conéctate a esta gran red de expertos.</CDBFooterLink>
+              <p style={{ color:'white', cursor: 'pointer' }}>Únete hoy a nosotros y conéctate a esta gran red de expertos.</p>
 
             </CDBBox>
           </CDBBox>
@@ -51,7 +51,7 @@ import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer,CDBBox  } from 
             </CDBBox>
           </CDBBox>
         </CDBBox>
-        <small className="text-center mt-5">&copy; Guruxy, 2022. All rights reserved.</small>
+        <small className="text-center mt-5" style={{ color:'white', cursor: 'pointer' }}>&copy; Guruxy, 2022. All rights reserved.</small>
       </CDBBox>
     </CDBFooter>
   );
